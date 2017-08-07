@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import RequirementList from './requirement-list';
 
 class App extends Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class App extends Component {
           </div>
           <hr/>
           <ul>
-            {this.state.data.map(element => <li key={element.id}>{element.text}</li>)}
+            <RequirementList list={this.state.data}/>
           </ul>
         </div>
       </div>
